@@ -1,0 +1,246 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: seo
+    description: SEO inspection operations
+  - name: feedback
+    description: Visitor feedback operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /seo/inspect:
+    post:
+      operationId: inspectSeo
+      tags: [seo]
+      summary: Inspect a website's SEO metadata
+      description: Fetches a public website and evaluates its SEO and social metadata.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SeoInspectionInput"
+      responses:
+        "200":
+          description: SEO inspection results
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SeoInspection"
+        "400":
+          description: Invalid URL
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "502":
+          description: Website could not be fetched
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /feedback:
+    post:
+      operationId: submitFeedback
+      tags: [feedback]
+      summary: Send visitor feedback
+      description: Delivers a visitor's feedback to the site owner by email.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FeedbackInput"
+      responses:
+        "200":
+          description: Feedback delivered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FeedbackReceipt"
+        "400":
+          description: Invalid feedback
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "502":
+          description: Feedback could not be delivered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    SeoInspectionInput:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          minLength: 8
+      required:
+        - url
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+    FeedbackInput:
+      type: object
+      properties:
+        category:
+          type: string
+          enum: [problem, suggestion, question, other]
+        message:
+          type: string
+          minLength: 10
+          maxLength: 3000
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        website:
+          type: string
+          maxLength: 0
+      required: [category, message]
+    FeedbackReceipt:
+      type: object
+      properties:
+        delivered:
+          type: boolean
+      required: [delivered]
+    SeoTag:
+      type: object
+      properties:
+        key:
+          type: string
+        label:
+          type: string
+        value:
+          type: ["string", "null"]
+        status:
+          type: string
+          enum: [pass, warn, fail, info]
+        note:
+          type: string
+        category:
+          type: string
+          enum: [core, social, technical, content]
+        weight:
+          type: integer
+      required: [key, label, value, status, note, category, weight]
+    SeoCheckGroup:
+      type: object
+      properties:
+        key:
+          type: string
+        label:
+          type: string
+        passed:
+          type: integer
+        total:
+          type: integer
+        tags:
+          type: array
+          items:
+            $ref: "#/components/schemas/SeoTag"
+      required: [key, label, passed, total, tags]
+    SeoPreview:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        url:
+          type: string
+        siteName:
+          type: string
+        image:
+          type: ["string", "null"]
+        imageAlt:
+          type: ["string", "null"]
+        twitterCard:
+          type: string
+        locale:
+          type: string
+      required: [title, description, url, siteName, image, imageAlt, twitterCard, locale]
+    SeoInspection:
+      type: object
+      properties:
+        url:
+          type: string
+        fetchedUrl:
+          type: string
+        hostname:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        score:
+          type: integer
+        scoreLabel:
+          type: string
+        passed:
+          type: integer
+        warnings:
+          type: integer
+        failures:
+          type: integer
+        checkedAt:
+          type: string
+        responseTimeMs:
+          type: integer
+        groups:
+          type: array
+          items:
+            $ref: "#/components/schemas/SeoCheckGroup"
+        preview:
+          $ref: "#/components/schemas/SeoPreview"
+      required:
+        - url
+        - fetchedUrl
+        - hostname
+        - title
+        - description
+        - score
+        - scoreLabel
+        - passed
+        - warnings
+        - failures
+        - checkedAt
+        - responseTimeMs
+        - groups
+        - preview
+

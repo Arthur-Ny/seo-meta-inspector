@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Builds and generated compiler output
+dist/
+tmp/
+out-tsc/
+coverage/
+*.tsbuildinfo
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Replit local state
+.cache/
+.local/
+connect.lock
+
+# Optional local downloads
+downloads/

@@ -1,0 +1,92 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171328" stop-opacity="0.96"/>
+      <stop offset="0.52" stop-color="#292438" stop-opacity="0.84"/>
+      <stop offset="1" stop-color="#2643FF" stop-opacity="0.42"/>
+    </linearGradient>
+    <linearGradient id="card" x1="777" y1="124" x2="1115" y2="506" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFEFB" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#EEEAF6" stop-opacity="0.94"/>
+    </linearGradient>
+    <filter id="shadow" x="700" y="65" width="490" height="520" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#100D1B" flood-opacity="0.34"/>
+    </filter>
+    <filter id="logoGlow" x="-20" y="-20" width="160" height="160" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2643FF" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="frame">
+      <rect width="1200" height="630" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <image href="mars-horizon-panorama.jpg" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
+    <rect width="1200" height="630" fill="url(#wash)"/>
+    <circle cx="1120" cy="82" r="240" fill="#2643FF" fill-opacity="0.13"/>
+    <circle cx="1070" cy="570" r="310" stroke="#B9C2FF" stroke-opacity="0.17" stroke-width="1.5"/>
+    <path d="M0 552C250 496 418 607 640 558C831 516 980 407 1200 454V630H0V552Z" fill="#151123" fill-opacity="0.28"/>
+  </g>
+
+  <g filter="url(#logoGlow)">
+    <rect x="74" y="64" width="68" height="68" rx="17" fill="#2643FF"/>
+    <path d="M90 108C90 98.059 98.059 90 108 90C117.941 90 126 98.059 126 108" stroke="#F8F4EC" stroke-width="5" stroke-linecap="round"/>
+    <path d="M108 108L118 94" stroke="#F8F4EC" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="108" cy="108" r="3.5" fill="#F8F4EC"/>
+  </g>
+  <text x="162" y="92" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="-0.5">SEO Meta</text>
+  <text x="162" y="122" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="-0.5">Inspector</text>
+
+  <text x="74" y="220" fill="#75E7C2" font-family="monospace" font-size="15" font-weight="700" letter-spacing="2.4">SIGNAL OVER NOISE</text>
+  <rect x="74" y="237" width="78" height="3" rx="1.5" fill="#2643FF"/>
+
+  <text x="74" y="313" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-2.2">See what search</text>
+  <text x="74" y="378" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-2.2">engines see.</text>
+
+  <text x="76" y="431" fill="#DDD9E8" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="400">
+    Inspect titles, descriptions, canonicals and social tags
+  </text>
+  <text x="76" y="462" fill="#DDD9E8" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="400">
+    in one clear, actionable report.
+  </text>
+
+  <g transform="translate(75 522)">
+    <rect width="348" height="50" rx="12" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.18"/>
+    <circle cx="25" cy="25" r="6" fill="#75E7C2"/>
+    <text x="44" y="32" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">seo-meta-inspector.com</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="754" y="93" width="372" height="444" rx="27" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.68" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(791 132)">
+    <text x="0" y="18" fill="#736E7C" font-family="monospace" font-size="12" font-weight="700" letter-spacing="1.4">PAGE SIGNAL REPORT</text>
+    <text x="0" y="72" fill="#292438" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="-1">Metadata health</text>
+    <text x="0" y="101" fill="#77727D" font-family="Inter, Arial, sans-serif" font-size="15">The essentials, explained clearly.</text>
+
+    <g transform="translate(0 139)">
+      <rect width="298" height="64" rx="14" fill="#FFFFFF" stroke="#DCD8E3"/>
+      <circle cx="32" cy="32" r="15" fill="#DDF8EE"/>
+      <path d="M25 32L30 37L39 27" stroke="#00A878" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="58" y="28" fill="#292438" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Title tag</text>
+      <text x="58" y="47" fill="#77727D" font-family="Inter, Arial, sans-serif" font-size="12">Clear and search-ready</text>
+    </g>
+
+    <g transform="translate(0 215)">
+      <rect width="298" height="64" rx="14" fill="#FFFFFF" stroke="#DCD8E3"/>
+      <circle cx="32" cy="32" r="15" fill="#DDF8EE"/>
+      <path d="M25 32L30 37L39 27" stroke="#00A878" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="58" y="28" fill="#292438" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Meta description</text>
+      <text x="58" y="47" fill="#77727D" font-family="Inter, Arial, sans-serif" font-size="12">Useful preview copy</text>
+    </g>
+
+    <g transform="translate(0 291)">
+      <rect width="298" height="64" rx="14" fill="#FFFFFF" stroke="#DCD8E3"/>
+      <circle cx="32" cy="32" r="15" fill="#E4E7FF"/>
+      <path d="M25 32L30 37L39 27" stroke="#2643FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="58" y="28" fill="#292438" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Social preview</text>
+      <text x="58" y="47" fill="#77727D" font-family="Inter, Arial, sans-serif" font-size="12">Ready to share</text>
+    </g>
+  </g>
+</svg>

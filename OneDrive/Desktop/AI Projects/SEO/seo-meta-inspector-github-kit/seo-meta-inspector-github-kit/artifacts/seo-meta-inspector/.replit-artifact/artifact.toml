@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "SEO Meta Inspector"
+description = "An interactive SEO inspection tool that fetches any public website, audits its meta tags against best practices, and renders Google and social media previews."
+version = "1.0.0"
+id = "artifacts/seo-meta-inspector"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21100
+
+[services.development]
+run = "pnpm --filter @workspace/seo-meta-inspector run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/seo-meta-inspector", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/seo-meta-inspector/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21100"
+BASE_PATH = "/"

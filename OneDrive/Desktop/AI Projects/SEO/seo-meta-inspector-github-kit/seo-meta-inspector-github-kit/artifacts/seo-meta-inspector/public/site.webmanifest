@@ -1,0 +1,17 @@
+{
+  "name": "SEO Meta Inspector",
+  "short_name": "SEO Inspector",
+  "description": "Free SEO metadata inspection for public websites.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#292438",
+  "theme_color": "#2643FF",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
