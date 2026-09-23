@@ -5,7 +5,7 @@ platforms can read from a public webpage.
 
 **Live demo:** [seo-meta-inspector.com](https://seo-meta-inspector.com/)
 
-![SEO Meta Inspector About page](OneDrive/Desktop/AI Projects/SEO/seo-meta-inspector-github-kit/seo-meta-inspector-github-kit/docs/images)
+![SEO Meta Inspector About page](OneDrive/Desktop/AI Projects/SEO/seo-meta-inspector-github-kit/seo-meta-inspector-github-kit/docs/images/about-page.jpg)
 
 ## What it does
 
