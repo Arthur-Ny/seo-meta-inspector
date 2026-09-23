@@ -5,7 +5,7 @@ platforms can read from a public webpage.
 
 **Live demo:** [seo-meta-inspector.com](https://seo-meta-inspector.com/)
 
-![SEO Meta Inspector About page](docs/images/about-page.jpg)
+![SEO Meta Inspector About page](about-page.jpg)
 
 ## What it does
 
